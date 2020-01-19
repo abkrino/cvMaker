@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+<!-- كل item وه عبارة عن الخانة اللي موجوده في الليست -->
     <item
         android:id="@+id/memories"
         android:title="@string/memories" />

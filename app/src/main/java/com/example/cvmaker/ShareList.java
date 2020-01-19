@@ -31,7 +31,8 @@ public class ShareList extends AppCompatActivity {
         calling();
         handling();
     }
-
+// بنادي علي الدتا اللي بتاها من calss ShareList
+// وبعرف الفيو
     private void calling() {
         list_item = findViewById(R.id.listShare);
         rs = getIntent().getExtras();
@@ -44,27 +45,38 @@ public class ShareList extends AppCompatActivity {
         String ts = checkIntent();
         setTypeList(ts);
     }
-
+//الميسود دي وظيفتها انها تشوف مين الزرار اللي انت اتكيت عليه عن طريق الدتا اللي اتبعت
+//  فالو اتبعت كلمة education والباقي فاضي يساوي الكلمة ب check
     public String checkIntent() {
+//        فالو اتبعت كلمة education والباقي فاضي يساوي الكلمة ب check
         if (education.equals("education") && skills.isEmpty() && courses.isEmpty()) {
             check = education;
+//            فالو اتبعت كلمة skills والباقي فاضي يساوي الكلمة ب check
         } else if (education.isEmpty() && skills.equals("skills") && courses.isEmpty()) {
             check = skills;
+            //            فالو اتبعت كلمة courses والباقي فاضي يساوي الكلمة ب check
+
         } else if (education.isEmpty() && skills.isEmpty() && courses.equals("courses")) {
             check = courses;
         }
+// وفي الاخر بترجع قيمة check
         return check;
     }
-
+// بتحط اليستة حسب الكلمة اللي بتديهلها
     public void setTypeList(String type) {
-        //todo فاضل اعدل في الادبتر
+//        عملت switch علشان اقارن الكلمة اللي جيا اللي هيا type
         switch (type) {
+//           لو education حط اليسته بتاعت education
+//      وخلي بالك انا عملت adapter في كلاس لوحد
             case "education":
                 list_item.setAdapter(new ListAdapter(ShareList.this, educationL, imageE, "education"));
                 break;
+            //           لو skills حط اليسته بتاعت skills
             case "skills":
                 list_item.setAdapter(new ListAdapter(ShareList.this, skillsL, imageS, "skills"));
                 break;
+            //           لو courses حط اليسته بتاعت courses
+
             case "courses":
                 list_item.setAdapter(new ListAdapter(ShareList.this, coursesL, imageC, "courses"));
                 break;
