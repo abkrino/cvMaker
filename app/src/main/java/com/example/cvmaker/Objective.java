@@ -19,12 +19,12 @@ public class Objective extends AppCompatActivity {
         calling();
         handling();
     }
-
+//عرفت الفيو
     private void calling() {
         imageIcone = findViewById(R.id.imageIcon);
         textObjective = findViewById(R.id.textObjective);
     }
-
+//حطيت الصور والتكست
     private void handling() {
     imageIcone.setImageResource(R.drawable.ic_launcher_background);
     textObjective.setText(getResources().getString(R.string.summry));
